@@ -5,9 +5,9 @@
 name: Scorecard supply-chain security
 on:
   schedule:
-    - cron: '0 9 * * 1,3,5'
+    - cron: "0 9 * * 1,3,5"
   push:
-    branches: [ "main" ]
+    branches: ["main"]
 
 permissions: read-all
 
@@ -31,7 +31,7 @@ jobs:
           results_file: results.sarif
           results_format: sarif
           publish_results: true
-          
+
       - name: "Upload artifact"
         uses: actions/upload-artifact@v4
         with:
